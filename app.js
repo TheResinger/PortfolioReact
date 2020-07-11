@@ -24,6 +24,9 @@ app.use('/', projectRouter);
 const resumesRouter = require('./routes/Resume');
 app.use('/resumes', resumesRouter);
 
+const mailRouter = require('./routes/Mail');
+app.use('/mail', mailRouter);
+
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/build'));
   app.get('*', (req, res) => {

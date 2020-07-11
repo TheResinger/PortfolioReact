@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ResumeItem from './ResumeItem';
 import ResumeService from '../Services/ResumeService';
 
-const Resumes = prop => {
+const Resumes = () => {
   const [oldResumes, setOldResumes] = useState([]);
   const [currentResume, setCurrentResume] = useState([]);
 
