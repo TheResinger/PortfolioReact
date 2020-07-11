@@ -13,6 +13,9 @@ const ResumeSchema = new mongoose.Schema({
   dates: {
     type: String,
   },
+  current: {
+    type: Boolean,
+  },
 });
 
 module.exports = mongoose.model('Resume', ResumeSchema);

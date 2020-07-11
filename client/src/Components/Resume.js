@@ -3,11 +3,16 @@ import ResumeItem from './ResumeItem';
 import ResumeService from '../Services/ResumeService';
 
 const Resumes = prop => {
-  const [resumes, setResumes] = useState([]);
+  const [oldResumes, setOldResumes] = useState([]);
+  const [currentResume, setCurrentResume] = useState([]);
 
   useEffect(() => {
-    ResumeService.getResumes().then(data => {
-      setResumes(data.resumes);
+    ResumeService.getCurrentResume().then(data => {
+      setCurrentResume(data.resumes);
+    });
+
+    ResumeService.getOldResumes().then(data => {
+      setOldResumes(data.resumes);
     });
   }, []);
 
@@ -27,45 +32,15 @@ const Resumes = prop => {
         <div className="row justify-content-center timeline">
           <h3 className="title">Present</h3>
         </div>
+        {currentResume.map(resume => {
+          return <ResumeItem key={resume._id} resume={resume} />;
+        })}
         <div className="row justify-content-center timeline">
           <h3 className="title">Previous Employment</h3>
         </div>
-        <div className="row justify-content-center timeline">
-          <div className="note">
-            <h4>CPH Engineers</h4>
-            <h5>Draftsman</h5>
-            <p className="desc">
-              Civil design engineer tasked with design of site/grading plans
-              based off of civil engineers design specifications.
-            </p>
-            <span className="date"> FEB 2019 to OCT 2019</span>
-          </div>
-        </div>
-        <div className="row justify-content-center timeline">
-          <div className="note">
-            <h4>Mack Concrete Industries</h4>
-            <h5>Draftsman</h5>
-            <p className="desc">
-              Draftsman tasked with design of FDOT standard structures for
-              production.
-            </p>
-            <span className="date"> OCT 2016 to FEB 2019 </span>
-          </div>
-        </div>
-        {/* <div className="row justify-content-center timeline">
-          <div className="note">
-            <h4>Placeholder</h4>
-            <h5>Placeholder</h5>
-            <p className="desc">
-              Lorem Ipsum roin gravida nibh vel velit auctor aliquet. Aenean
-              sollicitudin, lorem quis bibendum auctor, nisi elit consequat.
-              Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit
-              auctor aliquet. Aenean sollicitudin, quis bibendum auctor, nisi
-              elit consequat.
-            </p>
-            <span className="date"> Jan 2012 MAY 2012 </span>
-          </div>
-        </div>  */}
+        {oldResumes.map(resume => {
+          return <ResumeItem key={resume._id} resume={resume} />;
+        })}
         <div className="row justify-content-center timeline">
           <h3 className="title">Education</h3>
         </div>
@@ -96,3 +71,5 @@ const Resumes = prop => {
     </section>
   );
 };
+
+export default Resumes;

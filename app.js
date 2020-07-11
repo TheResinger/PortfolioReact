@@ -18,8 +18,11 @@ mongoose
   .then(() => console.log(`MongoDB Connected at ${dbConnectionString}`))
   .catch(err => console.log(err));
 
-const router = require('./routes/Projects');
-app.use('/', router);
+const projectRouter = require('./routes/Projects');
+app.use('/', projectRouter);
+
+const resumesRouter = require('./routes/Resume');
+app.use('/resumes', resumesRouter);
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/build'));
@@ -28,13 +31,14 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
-// const Project = require('./models/Project');
+// const Project = require('./models/Resume');
 // const projectInput = {
-//   projectname: 'Skybeat',
-//   imageurl: 'https://i.imgur.com/od58AEl.png',
-//   description: 'Stuff and thing',
-//   deploylink: 'https://skybeat.herokuapp.com',
-//   githublink: 'https://github.com/TheResinger/SkyBeat',
+//   company: 'Orange County Supervisor Of Elections',
+//   title: 'Early Voting Technician',
+//   description:
+//     'Hired onto a team of established technicians tasked with maintaining and operating the electronic voting machines for the various elections in the state.',
+//   dates: 'JAN 2020 - ',
+//   current: true,
 // };
 // const project = new Project(projectInput);
 // project.save((err, doc) => {
