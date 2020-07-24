@@ -8,13 +8,13 @@ const ProjectItem = props => {
         <div className="item-info">
           <h4>{props.project.projectname}</h4>
           <h3>
-            App Link :
+            App Link :&nbsp;
             <a href={props.project.deploylink} rel="noopener noreferrer" target="_blank">
               Link
             </a>
           </h3>
           <h3>
-            GitHub :
+            GitHub :&nbsp; 
             <a href={props.project.githublink} rel="noopener noreferrer" target="_blank">
               Link
             </a>

@@ -1,8 +1,7 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import nodemailer from 'nodemailer';
 import sgTransport from 'nodemailer-sendgrid-transport';
-import { response } from 'express';
-import { resolveContent } from 'nodemailer/lib/shared';
+// import Mail from 'nodemailer/lib/mailer';
 
 const options = {
   auth: {
@@ -13,17 +12,17 @@ const options = {
 
 const transporter = nodemailer.createTransport(sgTransport(options));
 
-const sendMail = message => {
-  return new Promise((res, reject) => {
-    transporter.sendMail(message, (err, info) => {
-      if (err) {
-        reject(error);
-        return;
-      }
-      resolve(info);
-    });
-  });
-};
+// const sendMail = message => {
+//   return new Promise((res, reject) => {
+//     transporter.sendMail(message, (err, info) => {
+//       if (err) {
+//         reject(error);
+//         return;
+//       }
+//       resolve(info);
+//     });
+//   });
+// };
 
 const ContactForm = () => {
   return (
@@ -91,3 +90,5 @@ const ContactForm = () => {
     </section>
   );
 };
+
+export default ContactForm;

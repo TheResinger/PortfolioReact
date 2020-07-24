@@ -5,6 +5,8 @@ import NavBar from './Components/Navbar';
 import About from './Components/About';
 import Projects from './Components/Projects';
 import Resume from './Components/Resume';
+// import ContactForm from './Components/Mail';
+import Footer from './Components/Footer'
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
       <Route exact path="/" component={About} />
       <Route exact path="/" component={Projects} />
       <Route exact path="/" component={Resume} />
+      {/* <Route exact path="/" component={ContactForm} /> */}
+      <Route exact path="/" component={Footer} />
     </Router>
   );
 }

@@ -1,5 +1,4 @@
 import React from 'react';
-// maybe i need to load all sub components in this file?
 
 const About = () => {
   return (
@@ -16,8 +15,8 @@ const About = () => {
         <div className="row">
           <div className="col-md-4 text-center item_bottom">
             <img
-              src="assets/img/bioimage.jpg"
-              className="img-center img-responsive"
+              src="https://i.imgur.com/msD9ief.png"
+              className="img-center img-fluid"
               alt="Personal Photo"
             />
             <div className="name-title">
@@ -27,8 +26,8 @@ const About = () => {
           </div>
           <div className="col-md-4 item_top">
             <h3>
-              Hello, I am an aspiring full stack web developer currently
-              enrolled in the UCF Full Stack Bootcamp.
+              Hello, I am an aspiring full stack web developer. I recently
+              graduated from a Full-Stack MERN bootcamp.
             </h3>
             <h4 className="text-center">Profecient Skills</h4>
             <div className="row text-center">
@@ -58,21 +57,21 @@ const About = () => {
               </li>
               <li>
                 <i className="fa fa-li fa-envelope-o"></i>
-                <strong>E-Mail</strong> :
+                <strong>E-Mail</strong> :&nbsp;
                 <a href="mailto:morrowbenjamin42@gmail.com">
                   morrowbenjamin42@gmail.com
                 </a>
               </li>
               <li>
                 <i className="fa fa-li fa-linkedin"></i>
-                <strong>LinkedIn</strong> :
+                <strong>LinkedIn</strong> :&nbsp;
                 <a href="https://linkedin.com/in/morrowbenjamin">
                   morrowbenjamin
                 </a>
               </li>
               <li>
                 <i className="fa fa-li fa-github-square"></i>
-                <strong>GitHub</strong> :
+                <strong>GitHub</strong> :&nbsp;
                 <a href="https://github.com/TheResinger">TheResinger</a>
               </li>
             </ul>

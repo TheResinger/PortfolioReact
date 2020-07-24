@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ProjectItem = props => {
+const ResumeItem = props => {
   return (
     <div className="row justify-content-center timeline">
       <div className="note">
@@ -13,4 +13,4 @@ const ProjectItem = props => {
   );
 };
 
-export default ProjectItem;
+export default ResumeItem;

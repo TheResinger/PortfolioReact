@@ -34,21 +34,6 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
-// const Project = require('./models/Resume');
-// const projectInput = {
-//   company: 'Orange County Supervisor Of Elections',
-//   title: 'Early Voting Technician',
-//   description:
-//     'Hired onto a team of established technicians tasked with maintaining and operating the electronic voting machines for the various elections in the state.',
-//   dates: 'JAN 2020 - ',
-//   current: true,
-// };
-// const project = new Project(projectInput);
-// project.save((err, doc) => {
-//   if (err) console.log(err);
-//   console.log(doc);
-// });
-
 app.listen(port, () => {
   console.log(`Server is listening at http://localhost:${port}`);
 });

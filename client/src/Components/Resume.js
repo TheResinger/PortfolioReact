@@ -36,7 +36,7 @@ const Resumes = () => {
           return <ResumeItem key={resume._id} resume={resume} />;
         })}
         <div className="row justify-content-center timeline">
-          <h3 className="title">Previous Employment</h3>
+          <h3 className="title">Past Employment</h3>
         </div>
         {oldResumes.map(resume => {
           return <ResumeItem key={resume._id} resume={resume} />;
@@ -48,7 +48,7 @@ const Resumes = () => {
           <div className="note">
             <h4>Bootcamp</h4>
             <h5>UCF</h5>
-            <p className="desc">Comprehensive Full-Stack coding bootcamp</p>
+            <p className="desc">Comprehensive MERN Stack coding bootcamp</p>
             <span className="date"> 2019 - 2019 </span>
           </div>
         </div>
