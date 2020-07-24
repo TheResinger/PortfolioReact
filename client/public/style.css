@@ -720,6 +720,7 @@ footer {
 .btn-trans,
 a.btn-trans {
   -moz-box-sizing: border-box;
+  box-sizing: border-box;
   background-color: #ffffff;
   border: medium none;
   color: #000 !important;
